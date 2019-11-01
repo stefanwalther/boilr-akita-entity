@@ -5,11 +5,11 @@ help:														## Show this help.
 	@echo ''
 .PHONY: help
 
-gen-readme: gen-output					## Generate README.md (using docker-verb)
+gen-readme: gen-output							## Generate README.md (using docker-verb)
 	docker run --rm -v ${PWD}:/opt/verb stefanwalther/verb
 .PHONY: gen-readme
 
-gen-output: reg      						## Generate the sample output
+gen-output: reg      							## Generate the sample output
 	mkdir -p ./sample ; \
 	cd ./sample; \
 	boilr template use akita-entity .; \
@@ -18,7 +18,7 @@ gen-output: reg      						## Generate the sample output
 	rm -rf ./sample;
 .PHONY: gen-output
 
-reg:														## Register the current template locally
+reg:											## Register the current template locally
 	boilr template save $(PWD) akita-entity -f
 .PHONY: reg
 
