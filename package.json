@@ -1,0 +1,22 @@
+{
+  "name": "boilr-akita-entity",
+  "version": "0.1.0",
+  "author": "Stefan Walther <swr.nixda@gmail.com> (http://qliksite.io)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefanwalther/boilr-akita-entity.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stefanwalther/boilr-akita-entity/issues"
+  },
+  "homepage": "https://github.com/stefanwalther/boilr-akita-entity#readme",
+  "description": "Boilr template to create an Akita entity",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
