@@ -29,10 +29,10 @@ export class {{ multiple | title }}Service {
     return request$;
   }
 
-  create({{ single }}: {{single}}, showToastr = false) {
+  create({{ single }}: {{single | title}}, showToastr = false) {
     const operation = 'create';
 
-    return this.http.post<{{single}}>(`${this.settingsService.settings.api}/{{ multiple }}`, {{ single }})
+    return this.http.post<{{single | title}}>(`${this.settingsService.settings.api}/{{ multiple }}`, {{ single }})
       .pipe(
         tap(data => {
           this.{{ multiple }}Store.add(data);
@@ -41,11 +41,11 @@ export class {{ multiple | title }}Service {
       );
   }
 
-  delete({{ single }}: {{ multiple | title }}) {
+  delete({{ single }}: {{ single | title }}) {
     const operation = 'delete';
     return this.http.delete(`${this.settingsService.settings.api}/{{ multiple }}/${{ "{" }}{{ single }}{{ "}"}}.id}`)
       .pipe(
-        tap(_ => this.{{ multiple | title }}Store.remove({{ single }}.id)),
+        tap(_ => this.{{ multiple }}Store.remove({{ single }}.id)),
         catchError(ErrorHandling.handleError(`${source}:${operation}`, []))
       );
   }
