@@ -5,8 +5,8 @@ import { {{ multiple | title }} } from './{{ single }}.model';
 export interface {{ multiple | title }}State extends EntityState<{{ multiple | title }}> {
 }
 
-@Injectable({providedIn: 'root', idKey: '_id'})
-@StoreConfig({name: 'targets'})
+@Injectable({providedIn: 'root'})
+@StoreConfig({name: 'targets', idKey: '_id'})
 export class {{ multiple | title }}Store extends EntityStore<{{ multiple | title }}State, {{ single | title }}> {
   constructor() {
     super();
