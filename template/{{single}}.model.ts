@@ -7,5 +7,9 @@ export interface {{ single | title }} {
    * (The MongoDB ObjectId)
    */
   id: ID;
+
+  /**
+   * An alias to `id`.
+   */
   {{single}}Id: string;
 }
