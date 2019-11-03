@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { EntityState, EntityStore, StoreConfig } from '@datorama/akita';
 import { {{ single | title }} } from './{{ single }}.model';
 
-export interface {{ multiple | title }}State extends EntityState<{{ multiple | title }}> {
+export interface {{ multiple | title }}State extends EntityState<{{ single | title }}> {
 }
 
 @Injectable({providedIn: 'root'})

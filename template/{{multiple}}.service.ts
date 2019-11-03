@@ -12,7 +12,7 @@ const source = '{{ multiple }}.service';
 export class {{ multiple | title }}Service {
 
   constructor(
-    private {{ multiple | title }}Store: {{ multiple | title }}Store,
+    private {{ multiple }}Store: {{ multiple | title }}Store,
     private http: HttpClient,
     private settingsService: SettingsService
   ) {
