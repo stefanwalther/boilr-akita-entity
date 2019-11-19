@@ -43,7 +43,7 @@ export class {{ multiple | title }}Service {
 
   delete({{ single }}: {{ single | title }}) {
     const operation = 'delete';
-    return this.http.delete(`${this.settingsService.settings.api}/{{ multiple }}/${{ "{" }}{{ single }}{{ "}"}.id}}`)
+    return this.http.delete(`${this.settingsService.settings.api}/{{ multiple }}/${{"{"}}{{ single }}{{"}"}}).id}`)
       .pipe(
         tap(_ => this.{{ multiple }}Store.remove({{ single }}.id)),
         catchError(ErrorHandling.handleError(`${source}:${operation}`, []))
